@@ -61,9 +61,9 @@ int main(void) {
 	while (1) {
 
 		Display_7seg(3, 6);
-		_delay_ms(50);
+		_delay_ms(1000);//for see the changes, you should delete it
 		Display_7seg(0, 7);
-		_delay_ms(50);
+		_delay_ms(1000);//for see the changes, you should delete it
 
 	}
 
