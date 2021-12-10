@@ -48,6 +48,7 @@ void Display_7seg(unsigned char num, unsigned char PIN_ACTIVE/*number of pin*/) 
 	S7SEG_PORT_DATA = ~numbers[num];
 	//end
 
+	_delay_ms(20);
 }
 
 int main(void) {
@@ -58,9 +59,7 @@ int main(void) {
 	while (1) {
 
 		Display_7seg(3, 6);
-		_delay_ms(1000);	//for see the changes, you should delete it
 		Display_7seg(0, 7);
-		_delay_ms(1000);	//for see the changes, you should delete it
 
 	}
 
