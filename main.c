@@ -56,11 +56,12 @@ int main(void) {
 	//setup directions of mC
 	S7SEG_DDR_DATA = S7SEG_DDR_ACTIVE = 0xff;
 
+
 	while (1) {
 
-		Display_7seg(3, 6);
-		Display_7seg(0, 7);
-
+		Display_7seg(5, 6);
+		Display_7seg(9, 7);
+;
 	}
 
 	return 0;
