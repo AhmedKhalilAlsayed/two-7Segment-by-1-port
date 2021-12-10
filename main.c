@@ -19,7 +19,7 @@ void Display_7seg(unsigned char num, unsigned char PIN_ACTIVE/*number of pin*/) 
 	 * هـنشغل شاشة واحدة بس و نقفل الباقي , و نبعت الرقم بتاعها
 	 * و بعد كدا هنقفل الكل و نشغل الشاشة التانية بس و هنبعت الرقم بتاعها
 	 * لو فيه وقت كبير 'ديلاي مثلا' ما بين الخطوات دي هتشوف ان واحدة شغالة و التانية مقفولة و هكذا
-	 * بس احنا شغالين بسرعة الكنتررولر ف مش هيبان الفرق
+	 * فهنختار ديلاي مناسب 
 	 * */
 
 	static unsigned char numbers[10] = {
@@ -48,7 +48,7 @@ void Display_7seg(unsigned char num, unsigned char PIN_ACTIVE/*number of pin*/) 
 	S7SEG_PORT_DATA = ~numbers[num];
 	//end
 
-	_delay_ms(20);
+	_delay_ms(20);//delay to make sure everything is okay for next use.
 }
 
 int main(void) {
